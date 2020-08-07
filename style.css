@@ -31,39 +31,145 @@
 }
 .contact-form{
   padding-top: 100px;
+  font-family: "Segoe Script";
 }
 .section-title{
   font-family: serif;
 }
-input, textarea {
-  width: 400px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  padding: 20px;
-  font-size: 18px;
-  border: 1px solid #dee7ec;
+
+// Helpers
+@mixin clearfix {
+   &:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
 }
-.contact-submit {
-  background-color:#fff8dc ;
+
+// Basics
+html {
+   height: 100%;
 }
-.contact-form{
-  font-family: "Segoe Script";
-  font-style: italic;
+body {
+   height: 100%;
+   position: relative;
 }
+// Grid
+.row {
+   @include clearfix;
+   margin: -20px 0;
+   .col {
+      padding: 0 20px;
+      float: left;
+      box-sizing: border-box;
+      &.x-50 {
+         width: 50%;
+      }
+      &.x-100 {
+         width: 100%;
+      }
+   }
+}
+
+.content-wrapper {
+   min-height: 100%;
+   position: relative;
+}
+
+.get-in-touch {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+
+.title {
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     font-size: 36px;
+     line-height: 48px;
+     padding-bottom: 10px;
+  }
+}
+
+.contact-form {
+   .form-field {
+      position: relative;
+      margin: 32px 0;
+   }
+   .input-text {
+      display: block;
+      width: 100%;
+      height: 36px;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      font-family: "Segoe Script";
+      &:focus {
+         outline: none;
+      }
+
+      &:focus,
+      &.not-empty {
+         + .label {
+            transform: translateY(-24px);
+         }
+      }
+   }
+   .label {
+      position: absolute;
+      left: 20px;
+      bottom: 11px;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      color:  #fff0f5;
+      cursor: text;
+      transition: transform .2s ease-in-out;
+   }
+
+   .submit-btn {
+      display: inline-block;
+      color: #fff0f5;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+   }
+}
+
+.note {
+   position: absolute;
+   left: 0;
+   bottom: 10px;
+   width: 100%;
+   text-align: center;
+   font-size: 16px;
+   line-height: 21px;
+
+.link {
+      color: #87cefa;
+   }
+}
+
 .section-title2{
   font-family: "Segoe Script";
   font-style: italic;
 }
 .footer {
   background-color:#f5f5f5;
-  height: 80px;
+  height: 600px;
   padding: 40px;
 
 }
 .footer-logo{
   font-size: 20px;
   float: left;
-  font-family:verdana;
+  font-family:"Segoe Script";
   font-weight: bold;
 }
 
