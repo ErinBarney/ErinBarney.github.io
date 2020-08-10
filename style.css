@@ -47,11 +47,12 @@
 
 }
 .footer-logo{
-  font-size: 20px;
-  float: left;
-  font-family:"Segoe Script";
-  font-weight: bold;
-}
+    font-size: 20px;
+    font-family:verdana;
+    font-weight: bold;
+    float: left;
+    padding: 20px 20px 20px 20px;
+  }
 
 .footer-list{
   float: right;
